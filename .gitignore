@@ -1,22 +1,19 @@
-# Compiled class file
-*.class
+##################################################
+#.gitignore文件用于配置忽略待提交的文件或目录，这样在提交的时候就不会提示被过滤掉的文件或目录
+#其格式为
+# 1 "#"开始表示注释
+# 2 *.后缀名表示不需要提交的文件
+# 3 xxxx/表示目录
+#################################################
 
-# Log file
-*.log
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+#对于一般程序而言，.class, .project, .classpath文件，bin, .settings, build目录等本地信息不需要提交
+#配置如下：
+.class
+.project
+.classpath
+bin/
+.settings/
+build/
+META-INF/
+target/
