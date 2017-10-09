@@ -11,10 +11,10 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/test")
 public class TestController {
 
-    @ApiOperation(value = "read")
-    @RequestMapping(value="/read", method=RequestMethod.GET)
+    @ApiOperation(value = "sayHello")
+    @RequestMapping(value="/hello", method=RequestMethod.GET)
     @ResponseBody
-    public String read(String name){
-        return name+"aa";
+    public String sayHello(String name){
+        return "hello " + name;
     }
 }

@@ -12,6 +12,13 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<mvc:annotation-driven />
+	<mvc:default-servlet-handler/>
 	<context:component-scan base-package="com.study.swagger.control" />
 	<import resource="beans-*.xml" />
+	<!-- 处理静态文件 -->
+	<!-- <mvc:resources location="/" mapping="*.html" />
+    <mvc:resources location="/" mapping="*.js" />
+    <mvc:resources location="/" mapping="*.css" />
+    <mvc:resources location="/" mapping="*.png" />
+    <mvc:resources location="/" mapping="*.gif" /> -->
 </beans>

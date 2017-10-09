@@ -16,6 +16,7 @@
 		<version.slf4j-log4j>1.6.6</version.slf4j-log4j>
 		<version.log4j>1.2.17</version.log4j>
 		<version.swagger>2.7.0</version.swagger>
+		<version.servlet-api>3.1.0</version.servlet-api>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -59,7 +60,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
+			<version>${version.servlet-api}</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- SERVLET API -->
