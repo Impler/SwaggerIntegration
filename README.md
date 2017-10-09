@@ -1,6 +1,7 @@
 # SpringMVC集成Swagger2
 
 ## 1 建立基本SpringMVC工程
+
 ###　1.1建立SpringMVC Maven工程
 web.xml  
 ```xml
@@ -42,7 +43,7 @@ applicatonContext.xml
 <context:component-scan base-package="com.study.swagger.control" />
 ```
 确保该Controller能够正常访问：  
-![确保能够正常访问](resources/images/正常访问.png "确保能够正常访问")  
+![确保能够正常访问](resources/images/正常访问.png)  
 
 ## 2 引入Swagger2
 ### 2.1 引入Swagger2依赖
@@ -97,7 +98,7 @@ public class SwaggerConfig {
 
 ### 2.4 部署启动
 访问http://localhost:8080/swagger/v2/api-docs：  
-![api-docs](resources/images/api-docs.png "api-docs")  
+![api-docs](resources/images/api-docs.png)  
 返回的JSON信息中，paths对应Controller中RequestMapping配置的路径  
 
 ## 3 引入Swagger UI
@@ -117,4 +118,4 @@ public class SwaggerConfig {
 
 ### 3.2 部署启动
 直接访问Swagger UI的首页：[http://localhost:8080/swagger/swagger-ui.html](http://localhost:8080/swagger/swagger-ui.html)。  
-![swagger-ui](resources/images/swagger-ui.png "swagger-ui")  
+![swagger-ui](resources/images/swagger-ui.png)  
