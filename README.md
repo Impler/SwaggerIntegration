@@ -2,7 +2,7 @@
 
 ## 1 建立基本SpringMVC工程
 
-### 1.1建立SpringMVC Maven工程
+### 1.1 建立SpringMVC Maven工程
 
 web.xml  
 ```xml
@@ -22,7 +22,7 @@ web.xml
 	<url-pattern>/</url-pattern>
 </servlet-mapping>
 ```
-### 1.2创建一个TestController
+### 1.2 创建一个TestController
 ```java
 package com.study.swagger.control;
 
