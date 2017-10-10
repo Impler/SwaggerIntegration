@@ -15,16 +15,12 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	<!-- <servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>spring</servlet-name>
 		<url-pattern>*.do</url-pattern>
 		<url-pattern>/v2/api-docs</url-pattern>
         <url-pattern>/swagger-resources</url-pattern>
         <url-pattern>/swagger-resources/configuration/security</url-pattern>
         <url-pattern>/swagger-resources/configuration/ui</url-pattern>
-	</servlet-mapping> -->
-	<servlet-mapping>
-        <servlet-name>spring</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
+	</servlet-mapping>
 </web-app>
