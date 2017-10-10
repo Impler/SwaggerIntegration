@@ -96,8 +96,25 @@ public class SwaggerConfig {
 ```xml
 <context:component-scan base-package="com.study.swagger.config" />
 ```
+### 2.4 添加@ApiOperation注解
+在Controller Bean中的@RequestMapping标识的方法上添加@ApiOperation注解。  
+```java
+package com.study.swagger.control;
 
-### 2.4 部署启动
+@Controller
+@RequestMapping("/test")
+public class TestController {
+
+    @ApiOperation(value = "sayHello")
+    @RequestMapping(value="/hello", method=RequestMethod.GET)
+    @ResponseBody
+    public String sayHello(String name){
+        return "hello " + name;
+    }
+}
+```
+
+### 2.5 部署启动
 访问http://localhost:8080/swagger/v2/api-docs：  
 ![api-docs](resources/images/api-docs.png "api-docs")  
 返回的JSON信息中，paths对应Controller中RequestMapping配置的路径  
@@ -137,6 +154,8 @@ web.xml
 - /swagger-resources：swagger资源路径，默认default
 - /swagger-resources/configuration/security：swagger安全性信息
 - /v2/api-docs：项目内的接口信息（重要）
+
+![swagger-request](resources/images/swagger-request.png "swagger-request") 
 
 这些请求url均在swagger-ui的jar包内的静态文件中定义，我们一般不去修改。但是swagger的这些请求又需要DispatcherServlet来分发处理，所以需要为这些url配置额外的url-pattern。  
 ```xml
