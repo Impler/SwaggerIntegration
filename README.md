@@ -2,7 +2,7 @@
 
 ## 1 建立基本SpringMVC工程
 
-###　1.1建立SpringMVC Maven工程
+### 1.1建立SpringMVC Maven工程
 
 web.xml  
 ```xml
@@ -121,6 +121,7 @@ public class SwaggerConfig {
 直接访问Swagger UI的首页：[http://localhost:8080/swagger/swagger-ui.html](http://localhost:8080/swagger/swagger-ui.html)。  
 ![swagger-ui](resources/images/swagger-ui.png "swagger-ui")  
 点开某个接口连接，输入入参信息，点击Try it Out!按钮即可。  
+完整示例：[https://github.com/Impler/SwaggerIntegration/tree/master/swagger-suffix](https://github.com/Impler/SwaggerIntegration/tree/master/swagger-simple)
 
 ## 4 包含后缀的URL配置
 上述配置的Spring DispatcherServlet拦截所有请求，包括静态资源，即url-pattern为/。但是现实中有很多将DispatcherServlet专门用来处理.do、.action等后缀结尾的请求，即。url-pattern为*.do、*.action。对静态资源的请求则交由default servlet来处理。   
@@ -140,10 +141,10 @@ web.xml
 这些请求url均在swagger-ui的jar包内的静态文件中定义，我们一般不去修改。但是swagger的这些请求又需要DispatcherServlet来分发处理，所以需要为这些url配置额外的url-pattern。  
 ```xml
 <servlet-mapping>
-	<servlet-name>spring</servlet-name>
-	<url-pattern>*.do</url-pattern>
-	<!-- 为swagger配置额外的pattern-->
-	<url-pattern>/v2/api-docs</url-pattern>
+    <servlet-name>spring</servlet-name>
+    <url-pattern>*.do</url-pattern>
+    <!-- 为swagger配置额外的pattern-->
+    <url-pattern>/v2/api-docs</url-pattern>
     <url-pattern>/swagger-resources</url-pattern>
     <url-pattern>/swagger-resources/configuration/security</url-pattern>
     <url-pattern>/swagger-resources/configuration/ui</url-pattern>
@@ -180,9 +181,9 @@ public class SwaggerApiSuffixAspect {
             }
             newPaths = null;
         }
-	}
+    }
 }
 
 ```
 ![swagger-suffix](resources/images/swagger-suffix.png "处理包含后缀的URL")  
-完整示例：
+完整示例：[https://github.com/Impler/SwaggerIntegration/tree/master/swagger-suffix](https://github.com/Impler/SwaggerIntegration/tree/master/swagger-suffix)
